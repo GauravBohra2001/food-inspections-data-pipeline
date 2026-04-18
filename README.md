@@ -148,35 +148,39 @@ BRONZE_SCHEMA = "Bronze_Zone"
 SILVER_SCHEMA = "Silver_Zone"
 GOLD_SCHEMA   = "Gold_Zone"
 META_SCHEMA   = "pipeline_metadata"
+```
 
-Step 2: Initialize Environment
-
+### Step 2: Initialize Environment
+```
 Run:
 
 01_Environment_Setup.ipynb
+```
 
-Step 3: Load Metadata
-
+### Step 3: Load Metadata
+```
 INSERT INTO Final_Project.pipeline_metadata.parent_metadata VALUES
 ('Dallas', 'Dallas_Restaurant_and_Food_Establishment_Inspections.csv', 'Y', current_date(), current_date()),
 ('Chicago', 'Chicago_Restaurant_and_Food_Establishment_Inspections.csv', 'Y', current_date(), current_date());
+```
 
-Step 4: Run Pipeline
-
+### Step 4: Run Pipeline
+```
 Execute notebooks in order:
 
 02_Raw_to_Bronze_Load.ipynb
 03_Bronze_to_Silver_Load.ipynb
 04_Silver_to_Gold_Load.ipynb
+```
 
-Step 5: Monitor Pipeline
-
+### Step 5: Monitor Pipeline
+```
 SELECT * 
 FROM Final_Project.pipeline_metadata.child_metadata
 ORDER BY execution_time DESC;
+```
 
-⸻
-
+```
 Project Structure
 
 ├── notebooks/
@@ -190,9 +194,8 @@ Project Structure
 ├── Source_to_Target_Mapping_Final_Project.xlsx
 ├── Food_Inspection(Final_project).nmodel
 └── README.md
-
-⸻
-
+```
+```
 Best Practices Implemented
 
 * Metadata-driven pipeline design
@@ -202,14 +205,11 @@ Best Practices Implemented
 * Use of surrogate keys for consistency
 * Quarantine handling for invalid data
 * Audit columns for lineage tracking
-
-⸻
+```
 
 Note on Visualization
 
 Power BI (.pbix) file is not included due to GitHub file size limitations. Dashboard screenshots can be added for reference.
-
-⸻
 
 Repository Purpose
 
