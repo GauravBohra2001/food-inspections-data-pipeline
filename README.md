@@ -100,6 +100,27 @@ The Gold layer follows a star schema design.
 - Analyze most common violations
 - Monitor historical changes in restaurant data
 ---
+## Dashboards
+
+These dashboards are built on the Gold layer star schema to demonstrate real-world analytics use cases.
+
+### Overview Dashboard
+![Overview](docs/images/dashboard-1.png)
+
+### Violation Analysis
+![Violation Analysis](docs/images/dashboard-2.png)
+
+### Trend Analysis
+![Trend Analysis](docs/images/dashboard-3.png)
+
+### City Comparison
+![City Comparison](docs/images/dashboard-4.png)
+
+---
+## Dimensional Model
+
+![Dimensional Model](docs/images/dimensional-model.png)
+---
 ## Tech Stack
 - Databricks
 - PySpark
